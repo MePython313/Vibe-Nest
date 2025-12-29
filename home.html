@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Vibe Up - Mini Social</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand"><img src="logo.svg" alt="VibeUp logo">VibeUp</div>
+        <div class="actions">
+            <span id="currentUser">Not signed in</span>
+            <button id="btn-show-login">Login</button>
+            <button id="btn-show-signup">Sign Up</button>
+            <button id="btn-logout" style="display:none">Logout</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="left">
+            <div class="auth-social">
+                <div class="social-row">
+                    <button class="social-btn" data-provider="Google">Continue with Google</button>
+                    <button class="social-btn" data-provider="Facebook">Continue with Facebook</button>
+                    <button class="social-btn" data-provider="Twitter">Continue with Twitter</button>
+                </div>
+            </div>
+
+            <div class="composer">
+                <textarea id="postText" placeholder="What's happening?" rows="3"></textarea>
+                <div class="composer-foot">
+                    <button id="btn-post">Post</button>
+                </div>
+            </div>
+
+            <div id="posts" class="posts"></div>
+        </section>
+
+        <aside class="right">
+            <div class="ad">
+                <div class="ad-title">Sponsored</div>
+                <div class="ad-body">Check out our partner offers — tasteful, relevant ads.</div>
+                <button id="ad-action">Learn more</button>
+            </div>
+
+            <div class="mini-login">
+                <h4>Quick Login</h4>
+                <button class="social-btn" data-provider="Google">Google</button>
+                <button class="social-btn" data-provider="Facebook">Facebook</button>
+            </div>
+        </aside>
+    </main>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-inner">
+            <button class="modal-close" id="modal-close">✕</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
